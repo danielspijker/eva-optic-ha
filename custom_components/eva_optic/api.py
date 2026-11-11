@@ -8,11 +8,11 @@ is no cloud.
 
 from __future__ import annotations
 
+import asyncio
 import logging
 from typing import Any
 
 import aiohttp
-import async_timeout
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -35,7 +35,7 @@ class EvaOpticClient:
     async def _get(self, path: str) -> dict[str, Any]:
         url = f"{self._base}/{path.lstrip('/')}"
         try:
-            async with async_timeout.timeout(10):
+            async with asyncio.timeout(10):
                 resp = await self._session.get(url)
                 resp.raise_for_status()
                 return await resp.json(content_type=None)
@@ -45,7 +45,7 @@ class EvaOpticClient:
     async def _post(self, path: str, payload: dict[str, Any] | None = None) -> None:
         url = f"{self._base}/{path.lstrip('/')}"
         try:
-            async with async_timeout.timeout(10):
+            async with asyncio.timeout(10):
                 resp = await self._session.post(url, json=payload or {})
                 resp.raise_for_status()
         except (aiohttp.ClientError, TimeoutError) as err:
