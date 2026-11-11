@@ -1,0 +1,11 @@
+{
+  "domain": "eva_optic",
+  "name": "EVA Optic EVAstream",
+  "codeowners": ["@danielspijker"],
+  "config_flow": true,
+  "documentation": "https://github.com/danielspijker/eva-optic-ha",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/danielspijker/eva-optic-ha/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

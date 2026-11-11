@@ -1,0 +1,50 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "EVA Optic EVAstream",
+        "description": "Enter the IP address or hostname of the EVAstream controller on your local network.",
+        "data": {
+          "host": "Host (IP address or hostname)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach the controller at that address."
+    },
+    "abort": {
+      "already_configured": "This controller is already configured."
+    }
+  },
+  "entity": {
+    "light": {
+      "underwater": { "name": "Underwater lighting" }
+    },
+    "select": {
+      "colour": { "name": "Light colour" },
+      "training": { "name": "Training" }
+    },
+    "number": {
+      "free_speed": { "name": "Free swim speed" },
+      "free_duration": { "name": "Free swim duration" },
+      "training_intensity": { "name": "Training intensity" }
+    },
+    "sensor": {
+      "status": { "name": "Status" },
+      "mode": { "name": "Mode" },
+      "free_remaining": { "name": "Free swim remaining" },
+      "training_total": { "name": "Training duration" },
+      "training_elapsed": { "name": "Training elapsed" },
+      "training_remaining": { "name": "Training remaining" },
+      "speed_gain": { "name": "Speed" }
+    },
+    "button": {
+      "start_free_swim": { "name": "Start free swim" },
+      "extend_free_swim": { "name": "Free swim +5 minutes" },
+      "pause": { "name": "Pause" },
+      "resume": { "name": "Resume" },
+      "stop": { "name": "Stop" },
+      "start_training": { "name": "Start training" }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "EVA Optic EVAstream",
+        "description": "Vul het IP-adres of de hostnaam van de EVAstream-controller in je lokale netwerk in.",
+        "data": {
+          "host": "Host (IP-adres of hostnaam)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Kon de controller op dat adres niet bereiken."
+    },
+    "abort": {
+      "already_configured": "Deze controller is al geconfigureerd."
+    }
+  },
+  "entity": {
+    "light": {
+      "underwater": { "name": "Onderwaterverlichting" }
+    },
+    "select": {
+      "colour": { "name": "Lichtkleur" },
+      "training": { "name": "Training" }
+    },
+    "number": {
+      "free_speed": { "name": "Vrij zwemmen snelheid" },
+      "free_duration": { "name": "Vrij zwemmen duur" },
+      "training_intensity": { "name": "Training intensiteit" }
+    },
+    "sensor": {
+      "status": { "name": "Status" },
+      "mode": { "name": "Modus" },
+      "free_remaining": { "name": "Vrij zwemmen resterend" },
+      "training_total": { "name": "Trainingsduur" },
+      "training_elapsed": { "name": "Training verstreken" },
+      "training_remaining": { "name": "Training resterend" },
+      "speed_gain": { "name": "Snelheid" }
+    },
+    "button": {
+      "start_free_swim": { "name": "Vrij zwemmen starten" },
+      "extend_free_swim": { "name": "Vrij zwemmen +5 minuten" },
+      "pause": { "name": "Pauzeren" },
+      "resume": { "name": "Hervatten" },
+      "stop": { "name": "Stoppen" },
+      "start_training": { "name": "Training starten" }
+    }
+  }
+}
